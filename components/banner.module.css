@@ -1,0 +1,12 @@
+.title1{
+    color: var(--color-black);
+    font-weight: var(--fw-600);
+    font-family: var(--fm-math);
+    margin-right: 1rem;
+}
+
+.title2{
+    color: var(--color-purple-dark);
+    font-weight: var(--fw-600);
+    font-family: var(--fm-math);
+}
