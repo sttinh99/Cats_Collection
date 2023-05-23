@@ -1,15 +1,28 @@
 import Link from "next/link";
-import { Typography } from "@mui/material";
 import Image from "next/image";
+import styles from "./Card.module.css";
+import { Box } from "@mui/material";
+import classnames from "classnames";
 
 const Card = (props) => {
   return (
-    <Link href={props.link}>
-      <a>
-        <h2>{props.title}</h2>
-        <Image src={props.linkImage} alt="picture2" width={260} height={260} />
-      </a>
-    </Link>
+    <Box className={classnames("glass", styles.cardContainer)}>
+      <Link href={props.link}>
+        <a className={styles.cardLink}>
+          <div className={styles.cardHeader}>
+            <h2>{props.title}</h2>
+          </div>
+          <div className={styles.cardImage}>
+            <Image
+              src={props.linkImage}
+              alt="picture2"
+              width={350}
+              height={250}
+            />
+          </div>
+        </a>
+      </Link>
+    </Box>
   );
 };
 export default Card;

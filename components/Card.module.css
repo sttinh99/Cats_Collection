@@ -1,0 +1,18 @@
+.cardHeader {
+  width: 100%;
+  text-align: center;
+}
+.cardContainer{
+    width: 23%;
+    margin-right: 2%;
+    margin-bottom: 1.5rem;
+}
+.cardImage{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.5rem;
+}
+.cardLink{
+    display: block;
+    height: 100%;
+}

@@ -3,6 +3,7 @@ import styles from "../styles/Home.module.css";
 import Banner from "../components/Banner";
 import Image from "next/image";
 import Card from "../components/Card";
+import listCard from "../data/coffee-stores.json";
 
 const cardProps = {
   title: "Meo Anh Quoc",
@@ -39,7 +40,16 @@ export default function Home() {
           width={300}
           height={300}
         />
-        <Card {...cardProps} />
+        <div className={styles.card_container}>
+          {listCard.map((card) => (
+            <Card
+              key={card.id}
+              title={card.name}
+              link={card.websiteUrl}
+              linkImage={card.imgUrl}
+            />
+          ))}
+        </div>
       </main>
     </div>
   );
