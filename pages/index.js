@@ -45,7 +45,7 @@ export default function Home() {
             <Card
               key={card.id}
               title={card.name}
-              link={card.websiteUrl}
+              link={`strangelovecoffee/${card.id}`}
               linkImage={card.imgUrl}
             />
           ))}
