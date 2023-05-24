@@ -51,7 +51,7 @@ export default function Home(props) {
                 <Card
                   key={card.id}
                   title={card.name}
-                  link={`strangelovecoffee/${card.id}`}
+                  link={`coffee-store/${card.id}`}
                   linkImage={card.imgUrl}
                 />
               ))}
