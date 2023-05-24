@@ -5,13 +5,16 @@ import Image from "next/image";
 import Card from "../components/Card";
 import listCard from "../data/coffee-stores.json";
 
-const cardProps = {
-  title: "Meo Anh Quoc",
-  link: "/abc/cd",
-  linkImage: "/static/cat.png",
-};
+export async function getStaticProps(context) {
+  return {
+    props: {
+      data: listCard,
+    },
+  };
+}
 
-export default function Home() {
+export default function Home(props) {
+  console.log("props", props);
   const handleOnClickBtn = () => {
     console.log("Click");
   };
@@ -40,16 +43,21 @@ export default function Home() {
           width={300}
           height={300}
         />
-        <div className={styles.card_container}>
-          {listCard.map((card) => (
-            <Card
-              key={card.id}
-              title={card.name}
-              link={`strangelovecoffee/${card.id}`}
-              linkImage={card.imgUrl}
-            />
-          ))}
-        </div>
+        {props.data.length > 0 && (
+          <>
+            <h2 className={styles.cardHeader}>Coffee Ahaha</h2>
+            <div className={styles.card_container}>
+              {props.data.map((card) => (
+                <Card
+                  key={card.id}
+                  title={card.name}
+                  link={`strangelovecoffee/${card.id}`}
+                  linkImage={card.imgUrl}
+                />
+              ))}
+            </div>
+          </>
+        )}
       </main>
     </div>
   );
