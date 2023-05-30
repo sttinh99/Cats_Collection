@@ -2,7 +2,7 @@
   {
     "id": 0,
     "name": "StrangeLove Coffee",
-    "imgUrl": "https://images.unsplash.com/photo-1504753793650-d4a2b783c15e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80",
+    "imgUrl": "https://i.pinimg.com/564x/6e/25/6b/6e256b222d426a15deac08267303b8d5.jpg",
     "websiteUrl": "https://www.strangelovecoffee.ca/",
     "address": "983 Queen St E, Toronto, ON M4M 1K2",
     "neighbourhood": "at King and Spadina"
@@ -10,7 +10,7 @@
   {
     "id": 1,
     "name": "Dark Horse Coffee",
-    "imgUrl": "https://images.unsplash.com/photo-1498804103079-a6351b050096?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2468&q=80",
+    "imgUrl": "https://i.pinimg.com/564x/1c/59/6c/1c596c7d8ec56700151a21c5d4a5cfe2.jpg",
     "websiteUrl": "https://www.darkhorseespresso.com/",
     "address": "401 Richmond St W",
     "neighbourhood": "Richmond and Spadina"
@@ -18,7 +18,7 @@
   {
     "id": 300,
     "name": "Route 300",
-    "imgUrl": "https://images.unsplash.com/photo-1498804103079-a6351b050096?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2468&q=80",
+    "imgUrl": "https://i.pinimg.com/564x/3d/ec/95/3dec9505b88a9c600582f5f19657cd81.jpg",
     "websiteUrl": "https://www.darkhorseespresso.com/",
     "address": "401 Richmond St W",
     "neighbourhood": "Route 300 Neighbourhood"

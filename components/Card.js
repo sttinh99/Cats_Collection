@@ -19,6 +19,7 @@ const Card = (props) => {
               alt="picture2"
               width={350}
               height={250}
+              objectFit="cover"
             />
           </div>
         </a>

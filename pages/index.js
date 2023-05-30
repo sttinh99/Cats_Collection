@@ -6,6 +6,12 @@ import Card from "../components/Card";
 import listCard from "../data/coffee-stores.json";
 
 export async function getStaticProps(context) {
+  if (!listCard.length) {
+    return {
+      notFound: true,
+    };
+  }
+
   return {
     props: {
       data: listCard,
@@ -14,10 +20,7 @@ export async function getStaticProps(context) {
 }
 
 export default function Home(props) {
-  console.log("props", props);
-  const handleOnClickBtn = () => {
-    console.log("Click");
-  };
+  const handleOnClickBtn = () => {};
 
   const bannerProps = {
     title1: "SPAM",
