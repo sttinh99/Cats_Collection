@@ -23,8 +23,8 @@ export default function Home(props) {
   const handleOnClickBtn = () => {};
 
   const bannerProps = {
-    title1: "SPAM",
-    title2: "My App",
+    title1: "CATs",
+    title2: "Collection",
     subtitle: "Discover For My App",
     buttonText: "Get App",
     actionClick: handleOnClickBtn,
@@ -43,8 +43,8 @@ export default function Home(props) {
           className={styles.pictureMain}
           src="/static/cat.png"
           alt="picture"
-          width={300}
-          height={300}
+          width={200}
+          height={200}
         />
         {props.data.length > 0 && (
           <>

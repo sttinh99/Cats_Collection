@@ -17,7 +17,7 @@ const Card = (props) => {
               className={styles.image}
               src={props.linkImage}
               alt="picture2"
-              width={350}
+              width={300}
               height={250}
               objectFit="cover"
             />

@@ -50,8 +50,8 @@ const CoffeeStore = (props) => {
           </Typography>
           <Image
             src={imgUrl}
-            width={450}
-            height={450}
+            width={300}
+            height={300}
             objectFit="cover"
             alt={name}
             className={styles.imageUrl}
