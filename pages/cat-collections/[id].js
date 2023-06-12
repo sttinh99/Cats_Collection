@@ -1,29 +1,30 @@
 import { Box, Typography } from "@mui/material";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import listCard from "../../data/coffee-stores.json";
 import Head from "next/head";
 import styles from "../../styles/coffee_shop.module.css";
 import cls from "classnames";
 import Image from "next/image";
 import addressIcon from "../../public/static/icons/place.svg";
 import nextMeIcon from "../../public/static/icons/near.svg";
+import { fetchCatsCollection } from "../../libs/cats-collection";
 
-export function getStaticProps({ params }) {
-  console.log("params", params);
+export async function getStaticProps({ params }) {
+  const data = await fetchCatsCollection();
   return {
     props: {
-      data: listCard.find((card) => card.id.toString() === params.id),
+      data: data.find((card) => card.id === params.id),
     },
   };
 }
 
-export function getStaticPaths() {
-  const paths = listCard.map((item) => ({
-    params: { id: item.id.toString() },
+export async function getStaticPaths() {
+  const data = await fetchCatsCollection();
+  const paths = data.map((item) => ({
+    params: { id: item.id },
   }));
   return {
-    paths,
+    paths: paths,
     fallback: true,
   };
 }
@@ -33,17 +34,16 @@ const CoffeeStore = (props) => {
   if (router.isFallback) {
     return <div>Loading...</div>;
   }
-  const { name, address, neighbourhood, imgUrl } = props.data;
-  console.log(props);
+  const { name, id, address, timezone, imgUrl } = props.data;
   return (
-    <>
+    <div key={id}>
       <Head>
         <title>{name}</title>
       </Head>
       <Box className={cls("glass_detail", styles.container)}>
         <Box className={styles.col1}>
           <Box className={styles.backHome}>
-            <Link href="/">Back Home</Link>
+            <Link href="/">Home</Link>
           </Box>
           <Typography className={styles.name} variant="h2">
             {name}
@@ -74,11 +74,11 @@ const CoffeeStore = (props) => {
               alt={address}
               className={styles.imageUrl}
             />
-            <p className={styles.siteDetail}>{neighbourhood}</p>
+            <p className={styles.siteDetail}>{timezone}</p>
           </Box>
         </Box>
       </Box>
-    </>
+    </div>
   );
 };
 export default CoffeeStore;

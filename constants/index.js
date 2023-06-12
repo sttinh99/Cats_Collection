@@ -1,0 +1,1 @@
+export const DEFAULT_IMAGE = "https://i.pinimg.com/564x/1c/59/6c/1c596c7d8ec56700151a21c5d4a5cfe2.jpg"

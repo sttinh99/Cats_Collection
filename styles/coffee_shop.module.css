@@ -8,12 +8,13 @@
 
 .backHome {
   display: inline;
-  font-size: 1.2rem;
-  color: #000;
+  font-size: 1rem;
+  font-weight: 400;;
+  color: #279f67;
   padding: 1rem 2rem 1rem;
   border-radius: 1rem;  
-  box-shadow: -2px 5px 21px 11px rgba(168, 198, 154, 0.75);
-  -webkit-box-shadow: -2px 5px 21px 11px rgba(140, 152, 151, 0.304);
+  box-shadow: -2px 5px 21px 11px rgba(154, 229, 172, 0.336);
+  -webkit-box-shadow: -2px 5px 21px 11px rgba(174, 237, 231, 0.304);
   -moz-box-shadow: -2px 5px 21px 11px rgba(156, 183, 150, 0.75);
 }
 
